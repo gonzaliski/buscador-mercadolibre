@@ -1,0 +1,26 @@
+.slider__img {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .slider__img {
+    transform: scale(0.85);
+  }
+}
+
+.carousel {
+  max-width: 400px;
+  min-width: 200px;
+  width: 100%;
+}
+
+.slide-button {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: var(--secondary-color);
+}

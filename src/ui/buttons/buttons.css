@@ -1,0 +1,21 @@
+.search {
+  border-style: none;
+  padding: 0 5px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+}
+
+.main__button {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  background-color: var(--secondary-color);
+}
+@media (min-width: 768px) {
+  .main__button {
+    max-width: 200px;
+  }
+}

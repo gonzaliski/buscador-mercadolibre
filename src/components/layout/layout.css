@@ -1,0 +1,35 @@
+.search__header {
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+@media (min-width: 768px) {
+  .search__header {
+    gap: 20px;
+  }
+}
+.content {
+  background-color: var(--background-color);
+  height: 100%;
+  min-height: 100vh;
+}
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+.creator__name {
+  visibility: hidden;
+  font-size: 2px;
+}
+
+@media (min-width: 768px) {
+  .creator__name {
+    visibility: visible;
+    font-size: 16px;
+    align-self: center;
+  }
+}
