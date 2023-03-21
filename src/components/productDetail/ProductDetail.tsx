@@ -3,8 +3,11 @@ import { MainButton } from "ui/buttons";
 import { MySlider } from "components/slider/Slider";
 import { useItemResult } from "hooks";
 import LoadingSpinner from "components/loader/Loader";
+import { useNavigate } from "react-router-dom";
 
 export function ProductDetail() {
+  let navigate = useNavigate();
+
   const product = useItemResult();
   console.log(product);
   return product ? (
@@ -19,7 +22,13 @@ export function ProductDetail() {
         </p>
         <h2 className={css["card__item-information-title"]}>{product.title}</h2>
         <span>$ {product.price}</span>
-        <MainButton>Ver producto</MainButton>
+        <MainButton
+          onClick={() => {
+            navigate(product.permalink, { replace: true });
+          }}
+        >
+          Ver producto
+        </MainButton>
         <div className={css["card__item-stock-amount"]}>
           <span>stock disponible: {product.available_quantity}</span>
         </div>
