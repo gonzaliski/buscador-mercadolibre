@@ -12,6 +12,16 @@
     gap: 20px;
   }
 }
+.tools__container {
+  display: none;
+}
+@media (min-width: 420px) {
+  .tools__container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
 .content {
   background-color: var(--background-color);
   height: 100%;
@@ -21,15 +31,6 @@
   height: 50px;
   cursor: pointer;
 }
-.creator__name {
-  visibility: hidden;
-  font-size: 2px;
-}
-
-@media (min-width: 768px) {
-  .creator__name {
-    visibility: visible;
-    font-size: 16px;
-    align-self: center;
-  }
+.logo__tool {
+  height: 30px;
 }

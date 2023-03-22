@@ -3,5 +3,5 @@ declare module "*.svg";
 
 type MainButtonProps = {
   children: any;
-  onClick: () => any;
+  onClick?: () => any;
 };

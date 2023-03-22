@@ -6,7 +6,7 @@ export function SearchButton({ children }) {
 
 export function MainButton(props: MainButtonProps) {
   return (
-    <button onClick={props.onClick} className={css["main__button"]}>
+    <button onClick={props?.onClick} className={css["main__button"]}>
       {props.children}
     </button>
   );

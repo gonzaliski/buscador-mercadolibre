@@ -1,6 +1,5 @@
-import css from "./slider.css";
 import Carousel from "nuka-carousel";
-import { MainButton } from "ui/buttons";
+import css from "./slider.css";
 
 type ImgUrlArray = {
   pictures: string[];
@@ -14,7 +13,9 @@ function MySlider(props: ImgUrlArray) {
       adaptiveHeight={true}
       defaultControlsConfig={{
         pagingDotsStyle: {
-          margin: "5px 8px 0px 8px",
+          display: props.pictures.length > 10 ? "none" : "initial",
+          margin:
+            props.pictures.length > 10 ? "5px 5px 0px 5px" : "5px 8px 0px 8px",
         },
       }}
       renderCenterLeftControls={({ previousDisabled, previousSlide }) => (

@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import {
-  itemResultState,
   itemQueryState,
+  itemResultState,
   queryState,
   resultsState,
 } from "./atoms";

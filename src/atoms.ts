@@ -29,15 +29,11 @@ export const resultsState = selector({
 export const itemResultState = selector({
   key: "itemResult",
   get: async ({ get }) => {
-    const itemValue = get(itemQueryState);
-    // ### TU CÓDIGO
-    // hago la búsqueda usando la API de mercadolibre
-    if (itemValue) {
-      console.log(itemValue);
+    const itemID = get(itemQueryState);
+    if (itemID) {
+      console.log(itemID);
 
-      const res = await fetch(
-        `https://api.mercadolibre.com/items/${itemValue}`
-      );
+      const res = await fetch(`https://api.mercadolibre.com/items/${itemID}`);
       const resJson = await res.json();
       console.log(resJson);
 

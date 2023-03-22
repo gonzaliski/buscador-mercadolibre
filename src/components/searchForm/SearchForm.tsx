@@ -6,7 +6,7 @@ import css from "./searchForm.css";
 function SearchForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (props.onSearch) {
+    if (e.target.search.value !== "" && props.onSearch) {
       props.onSearch(e.target.search.value);
     }
   };

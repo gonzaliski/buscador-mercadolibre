@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Rating } from "react-simple-star-rating";
 import css from "./ProductItem.css";
 
 function ProductItem(props) {
@@ -6,6 +7,8 @@ function ProductItem(props) {
   const goProductDetail = () => {
     navigate(`/item/${props.id}`);
   };
+  console.log(props.starring / 10);
+
   return (
     <div className={css["card"]}>
       <div className={css["card__item-container"]}>
